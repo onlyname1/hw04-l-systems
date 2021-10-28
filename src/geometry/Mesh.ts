@@ -1,13 +1,14 @@
 import {vec3, vec4} from 'gl-matrix';
 import Drawable from '../rendering/gl/Drawable';
 import {gl} from '../globals';
-import * as Loader from 'webgl-obj-loader';
+const Loader = require('webgl-obj-loader');
 
 class Mesh extends Drawable {
   indices: Uint32Array;
   positions: Float32Array;
   normals: Float32Array;
   colors: Float32Array;
+  offsets: Float32Array; // Data for bufTranslate
   uvs: Float32Array;
   center: vec4;
 
@@ -77,6 +78,16 @@ class Mesh extends Drawable {
 
     console.log(`Created Mesh from OBJ`);
     this.objString = ""; // hacky clear
+  }
+
+  setInstanceVBOs(offsets: Float32Array, colors: Float32Array) {
+    this.colors = colors;
+    this.offsets = offsets;
+
+    gl.bindBuffer(gl.ARRAY_BUFFER, this.bufCol);
+    gl.bufferData(gl.ARRAY_BUFFER, this.colors, gl.STATIC_DRAW);
+    gl.bindBuffer(gl.ARRAY_BUFFER, this.bufTranslate);
+    gl.bufferData(gl.ARRAY_BUFFER, this.offsets, gl.STATIC_DRAW);
   }
 };
 
