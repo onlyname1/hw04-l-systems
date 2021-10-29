@@ -32,7 +32,7 @@ let time: number = 0.0;
 let expansionRules: Map<string, ExpansionRule> = new Map();
 let drawRules: Map<string, DrawingRule> = new Map();
 let turtleStack: Turtle[] = [];
-let meshPath = '../models/cylinderRotated2Smooth.obj';
+let meshPath = './models/cylinderRotated2Smooth.obj';
 let cylinder: Mesh;
 
 // function loadScene() {
