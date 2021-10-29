@@ -6,7 +6,7 @@ Pennkey: onlyname
 
 ## Overview
 * **Alien Hand**
-<img src="AlienHand.png" width="800"/>
+<img src="AlienHand1.png" width="800"/>
 
 <img src="AlienHandw.png" width="800"/>
 * **Inspiration**
