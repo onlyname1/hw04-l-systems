@@ -6084,7 +6084,7 @@ let time = 0.0;
 let expansionRules = new Map();
 let drawRules = new Map();
 let turtleStack = [];
-let meshPath = '../models/cylinderRotated2Smooth.obj';
+let meshPath = './models/cylinderRotated2Smooth.obj';
 let cylinder;
 // function loadScene() {
 //   square = new Square();
