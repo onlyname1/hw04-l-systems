@@ -6086,35 +6086,6 @@ let drawRules = new Map();
 let turtleStack = [];
 let meshPath = './models/cylinderRotated2Smooth.obj';
 let cylinder;
-// function loadScene() {
-//   square = new Square();
-//   square.create();
-//   screenQuad = new ScreenQuad();
-//   screenQuad.create();
-//   // Set up instanced rendering data arrays here.
-//   // This example creates a set of positional
-//   // offsets and gradiated colors for a 100x100 grid
-//   // of squares, even though the VBO data for just
-//   // one square is actually passed to the GPU
-//   let offsetsArray = [];
-//   let colorsArray = [];
-//   let n: number = 100.0;
-//   for(let i = 0; i < n; i++) {
-//     for(let j = 0; j < n; j++) {
-//       offsetsArray.push(i);
-//       offsetsArray.push(j);
-//       offsetsArray.push(0);
-//       colorsArray.push(i / n);
-//       colorsArray.push(j / n);
-//       colorsArray.push(1.0);
-//       colorsArray.push(1.0); // Alpha channel
-//     }
-//   }
-//   let offsets: Float32Array = new Float32Array(offsetsArray);
-//   let colors: Float32Array = new Float32Array(colorsArray);
-//   square.setInstanceVBOs(offsets, colors);
-//   square.setNumInstances(n * n); // grid of "particles"
-// }
 // adapted from https://stackoverflow.com/questions/14446447/how-to-read-a-local-text-file
 function readTextFile(file) {
     var rawFile = new XMLHttpRequest();
